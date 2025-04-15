@@ -3,7 +3,6 @@ import styles from './AccountItem.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
-import '~/assets/images/z6309734928139_52d67006dbc4873f82b94dcccb6f46f8.jpg'
 
 const cx = classNames.bind(styles)
 
