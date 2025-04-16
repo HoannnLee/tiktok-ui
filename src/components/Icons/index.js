@@ -1,10 +1,10 @@
-export const UploadIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => (
+export const UploadIcon = ({ className, width = '2.4rem', height = '2.4rem' }) => (
     <svg
         fill="currentColor"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
         className={className}
-        width={width}
+        width={width}s
         height={height}
     >
         <path d="M25 15a1 1 0 0 1 1 1v6h6a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-6v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-6h-6a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h6v-6a1 1 0 0 1 1-1h2Z"></path>
@@ -45,7 +45,7 @@ export const SearchIcon = ({ width = '2.4rem', height = '2.4rem', className }) =
         width={width}
         height={height}
         viewBox="0 0 48 48"
-        fill="rgba(22, 24, 35, 0.34)"
+        fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
     >
         <path
@@ -56,7 +56,7 @@ export const SearchIcon = ({ width = '2.4rem', height = '2.4rem', className }) =
     </svg>
 );
 
-export const InboxIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
+export const InboxIcon = ({ width = '3rem', height = '3rem', className }) => (
     <svg
         className={className}
         width={width}

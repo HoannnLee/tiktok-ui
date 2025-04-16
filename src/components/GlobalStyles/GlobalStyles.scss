@@ -83,4 +83,7 @@ body {
     .tippy-arrow{
         color:  rgba(84, 84, 84, 0.92);
     }
+    .tippy-tooltip.tomato-theme[data-placement^='bottom'] .tippy-arrow {
+        border-top-color: #fff;
+    }
 }
