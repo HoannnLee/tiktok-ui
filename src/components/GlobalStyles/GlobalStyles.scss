@@ -6,19 +6,19 @@
     --primary:#fe2c55;
     --black:#000;
     --white:#fff;
-    --text-color: #333;
+    --text-color: #161823;
 
     //Default Layout
     --default-layout-header-height:60px;
     --default-layout-width:1150px;
-
+    --default-layout-horizontal-spacer : 24px;
 }
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    
+    font-family: 'IBM Plex Sans', san-serif;
 }
 
 html{
@@ -26,7 +26,6 @@ html{
 }
 
 body{
-    font-family: 'IBM Plex Sans', san-serif;
     font-size: 1.6rem;
     line-height: 1.5;
     //tối ưu tốc độ tải font chữ
@@ -42,4 +41,20 @@ button,input, [tabindex]{
 a[href] {
     color: var(--text-color);
     text-decoration: none;
+}
+// custtom tippy 
+body {
+    .tippy-box{
+        background-color: rgba(84, 84, 84, 0.92);
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 22px;
+    }
+    .tippy-content{
+        padding: 8px 9px;
+    }
+    .tippy-arrow{
+        color:  rgba(84, 84, 84, 0.92);
+    }
 }
