@@ -1,5 +1,6 @@
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
+import PropTypes from 'prop-types';
 
 import classNames from 'classnames/bind';
 import styles from './Menu.module.scss';
@@ -12,9 +13,9 @@ import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
-const defaultFn = () => {}
+const defaultFn = () => {};
 
-function Menu({ children, items = [] ,hideOnCLick = false ,onChange = defaultFn}) {
+function Menu({ children, items = [], hideOnCLick = false, onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
 
@@ -27,8 +28,8 @@ function Menu({ children, items = [] ,hideOnCLick = false ,onChange = defaultFn}
                     setHistory((pre) => {
                         return [...pre, item.children];
                     });
-                }else{
-                    onChange(item)
+                } else {
+                    onChange(item);
                 }
             };
 
@@ -47,23 +48,28 @@ function Menu({ children, items = [] ,hideOnCLick = false ,onChange = defaultFn}
             interactive
             delay={[0, 700]}
             placement="bottom-end"
-            offset={[12,8]}
+            offset={[12, 8]}
             hideOnClick={hideOnCLick}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs} visible>
                     <PopperWrapper className={cx('menu-popper')}>
-                        {history.length > 1 && <Header title="Language" onBack={handleBack} />}
+                        {history.length > 1 && <Header title={current.title} onBack={handleBack} />}
                         <div className={cx('menu-body')}>{renderItems()}</div>
                     </PopperWrapper>
                 </div>
             )}
-            onHide={() => 
-                setHistory((prev) => prev.slice(0, 1))
-            }
+            onHide={() => setHistory((prev) => prev.slice(0, 1))}
         >
             {children}
         </Tippy>
     );
+}
+
+Menu.propTypes = {
+    children: PropTypes.node.isRequired,
+    items: PropTypes.array,
+    hideOnCLick: PropTypes.bool,
+    onChange: PropTypes.func
 }
 
 export default Menu;
