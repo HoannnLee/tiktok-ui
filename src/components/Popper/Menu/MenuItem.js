@@ -1,4 +1,4 @@
-import Button from '~/components/Button';
+import Button from '~/components/Button/Button';
 import PropTypes from 'prop-types';
 
 import classNames from 'classnames/bind';
@@ -9,6 +9,7 @@ function MenuItem({ data , onClick}) {
     const classes = cx('menu-item', {
         separate : data.separate
     });
+
     return (
         <Button className={classes} leftIcon={data.icon} to={data.to} onClick ={onClick}>
             {data.title}
