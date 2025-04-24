@@ -1,5 +1,6 @@
 function Message() {
-    return <h2>Message</h2>;
+    return <h2>Message
+  </h2>;
 }
 
 export default Message;

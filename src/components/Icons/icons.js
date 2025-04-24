@@ -26,6 +26,22 @@ export const MessageIcon = ({ className, width = '2.4rem', height = '2.4rem' }) 
     </svg>
 );
 
+export const MessageActionIcon = ({ className, width = '2.4rem', height = '2.4rem' }) => {
+    return (
+        <svg
+            className={className}
+            width={width}
+            height={height}
+            fill="currentColor"
+            class="css-xv0h9f-StyledActiveMessageIcon en5j2391"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path d="M45.73 9.5a2 2 0 0 0-1.73-1H4a2 2 0 0 0-1.48 3.35l10.44 11.47a2 2 0 0 0 2.2.52l14.49-5.5c.17-.07.25-.04.28-.03.06.02.14.08.2.2.07.1.08.2.08.27 0 .04-.02.12-.16.23l-11.9 10.1a2 2 0 0 0-.62 2.12l4.56 14.51a2 2 0 0 0 3.64.4l20-34.64a2 2 0 0 0 0-2Z"></path>
+        </svg>
+    );
+};
+
 export const UserIcon = ({ className, width = '2.4rem', height = '2.4rem' }) => (
     <svg
         fill="currentColor"
@@ -73,6 +89,44 @@ export const InboxIcon = ({ width = '3rem', height = '3rem', className }) => (
         ></path>
     </svg>
 );
+
+export const ActionIcon = ({ width = '3rem', height = '3rem', className }) => {
+    return (
+        <svg
+            className={className}
+            width={width}
+            height={height}
+            viewBox="0 0 48 48"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                filldRule="evenodd"
+                clipRule="evenodd"
+                d="M11.4977 9C10.1195 9 9.0013 10.1153 8.99767 11.4934L8.94239 32.4934C8.93875 33.8767 10.0591 35 11.4424 35H18.7895L22.0656 39.004C23.0659 40.2265 24.9352 40.2264 25.9354 39.0039L29.2111 35H36.5587C37.942 35 39.0623 33.8767 39.0587 32.4934L39.0029 11.4934C38.9993 10.1152 37.8811 9 36.5029 9H11.4977ZM29 21H19C18.4477 21 18 21.4477 18 22V23C18 23.5523 18.4477 24 19 24H29C29.5523 24 30 23.5523 30 23V22C30 21.4477 29.5523 21 29 21Z"
+            ></path>
+        </svg>
+    );
+};
+
+export const InboxActionIcon = ({ className, width = '3.2rem', height = '3.2rem' }) => {
+    return (
+        <svg
+            className={className}
+            width={width}
+            height={height}
+            viewBox="0 0 48 48"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.4977 9C10.1195 9 9.0013 10.1153 8.99767 11.4934L8.94239 32.4934C8.93875 33.8767 10.0591 35 11.4424 35H18.7895L22.0656 39.004C23.0659 40.2265 24.9352 40.2264 25.9354 39.0039L29.2111 35H36.5587C37.942 35 39.0623 33.8767 39.0587 32.4934L39.0029 11.4934C38.9993 10.1152 37.8811 9 36.5029 9H11.4977ZM29 21H19C18.4477 21 18 21.4477 18 22V23C18 23.5523 18.4477 24 19 24H29C29.5523 24 30 23.5523 30 23V22C30 21.4477 29.5523 21 29 21Z"
+            ></path>
+        </svg>
+    );
+};
 
 export const getCoinsIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
     <svg
@@ -141,18 +195,23 @@ export const DiscoverIcon = ({ width = '3.2rem', height = '3.2rem', className })
         <path d="M27.13 27.18 19 32.1a.6.6 0 0 1-.9-.63l1.84-9.33a2 2 0 0 1 .92-1.32L29 15.9a.6.6 0 0 1 .9.63l-1.84 9.33a2 2 0 0 1-.93 1.32Zm-5.04-.45 3.11-1.89.7-3.57-3.1 1.89-.7 3.57Z"></path>
     </svg>
 );
-export const followedIcon = ({ width = '2.4rem', height = '2.4rem', className }) => (
-    <svg
-        className={className}
-        width={width}
-        height={height}
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-    >
-        <path d="M18.99 3a10 10 0 1 1 0 20 10 10 0 0 1 0-20Zm0 4a6 6 0 1 0 0 12.01A6 6 0 0 0 19 7ZM18.99 26c2.96 0 5.6.58 7.87 1.65l-3.07 3.06a15.38 15.38 0 0 0-4.8-.71C10.9 30 6.3 35.16 6 43c-.02.55-.46 1-1.02 1h-2c-.55 0-1-.45-.98-1C2.33 32.99 8.7 26 19 26ZM35.7 41.88 31.82 38H45a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H31.82l3.88-3.88a1 1 0 0 0 0-1.41l-1.41-1.42a1 1 0 0 0-1.42 0l-7.3 7.3a2 2 0 0 0 0 2.82l7.3 7.3a1 1 0 0 0 1.42 0l1.41-1.42a1 1 0 0 0 0-1.41Z"></path>
-    </svg>
-);
+
+export const DiscoverActionIcon = ({ width = '3.2rem', height = '3.2rem', className }) => {
+    return (
+        <svg
+            width={width}
+            height={height}
+            className={className}
+            fill="currentColor"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path d="M24 40.5a16.5 16.5 0 1 0 0-33 16.5 16.5 0 0 0 0 33Zm4.43-14.54c-.12.6-.49 1.12-1.01 1.44l-8.88 5.37a.65.65 0 0 1-.98-.69l2.01-10.18c.12-.6.49-1.12 1.01-1.44l8.88-5.37a.65.65 0 0 1 .98.69l-2.01 10.18Z"></path>
+            <path d="m21.92 26.89 3.4-2.05.76-3.9-3.4 2.06-.76 3.89Z"></path>
+        </svg>
+    );
+};
+
 export const UserGroupIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     <svg
         className={className}
@@ -195,6 +254,7 @@ export const UserGroupActiveIcon = ({ width = '3.2rem', height = '3.2rem', class
         <path d="M33 26.5C36.0376 26.5 38.5 24.0376 38.5 21C38.5 17.9624 36.0376 15.5 33 15.5C29.9624 15.5 27.5 17.9624 27.5 21C27.5 24.0376 29.9624 26.5 33 26.5Z"></path>
     </svg>
 );
+
 export const LiveIcon = ({ width = '3.2rem', height = '3.2rem', className }) => (
     <svg
         className={className}

@@ -12,6 +12,7 @@ import Upload from '~/pages/Upload'
 import Search from '~/pages/Search'
 import Discover from '~/pages/Discover'
 import Message from '~/pages/Message'
+import Action from '~/pages/Action'
 
 const publicRoutes = [
     { path: Config.routes.home, component: Home},
@@ -20,7 +21,8 @@ const publicRoutes = [
     { path: Config.routes.discover, component: Discover},
     { path: Config.routes.upload, component: Upload, layout : HeaderOnly},
     { path: Config.routes.search, component: Search, layout : null},
-    { path: Config.routes.message, component: Message, layout : null}
+    { path: Config.routes.message, component: Message},
+    { path: Config.routes.action, component: Action}
 ]
 
 const privateRoutes = [

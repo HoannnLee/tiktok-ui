@@ -7,6 +7,7 @@ const routes = {
     discover: '/discover',
     message: '/message',
     live: '/live',
+    action: '/action',
 }
 
 export default routes
